@@ -34,7 +34,7 @@ class BamBoo extends Component {
         return true;
     }
     async UNSAFE_componentWillReceiveProps(nextProps) {
-        console.log('nextProps: ', nextProps)
+        console.log('UNSAFE_componentWillReceiveProps')
         
         console.log('UNSAFE_componentWillReceiveProps')
     }
