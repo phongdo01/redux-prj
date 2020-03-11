@@ -9,14 +9,11 @@ class BamBoo extends Component {
         }
     }
     componentWillMount() {
-        console.log('will mount')
         this.setState({
             status: this.state.status+1
         });
-        console.log('liu tiu')
     }
     componentDidMount() {
-        console.log('did mount')
         this.setState({
             status: this.state.status+1
         });
@@ -34,13 +31,8 @@ class BamBoo extends Component {
         return true;
     }
     async UNSAFE_componentWillReceiveProps(nextProps) {
-        console.log('UNSAFE_componentWillReceiveProps')
-        
-        console.log('UNSAFE_componentWillReceiveProps')
     }
     render() {
-        console.log('render')
-        console.log('state: ', this.state.status)
         return (
             <div>
                 <button onClick={this.changeState.bind(this)} className='btn btn-primary'>Change</button>

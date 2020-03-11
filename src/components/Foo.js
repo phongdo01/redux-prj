@@ -10,7 +10,24 @@ class Foo extends Component {
         }
     }
     render() {
-        console.log('redux: ', this.props.contribute)
+        let state = {
+            name: 'Nguyen',
+            age: 25
+        }
+        const stateInitialState = {...state}
+        const newReducer = (state = stateInitialState, action) => {
+            switch (action.type) {
+                case 'ADD':
+                    return {...state, action: 'ADD'}
+                default:
+                    return state
+            }
+        }
+        const redux = require('redux')
+        let store = redux.createStore(newReducer)
+        console.log(store.getState())
+        store.dispatch({type: 'ADD'})
+        console.log(store.getState())
         return (
             <div>
                 {this.props.contribute}
