@@ -25,9 +25,8 @@ class Foo extends Component {
         }
         const redux = require('redux')
         let store = redux.createStore(newReducer)
-        console.log(store.getState())
+        store.subscribe(()=>console.log(store.getState()))
         store.dispatch({type: 'ADD'})
-        console.log(store.getState())
         return (
             <div>
                 {this.props.contribute}
